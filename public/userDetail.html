@@ -1,0 +1,37 @@
+<div class='col-sm-12 border-black '>
+    <div class="user-detail">
+            <div class="col-sm-2 m-t-5">
+                    <img  src="{{vm.user.avatar_url}}" border='5' alt="{{vm.user.login}}" height="180" width="100%">
+                    <h4 class="text-primary">{{vm.user.name}}</h4>
+                    <a href="{{vm.user.html_url}}">{{vm.user.login}}</a>
+                    <p>{{vm.user.bio}}</p>
+                    <a type="button" class="btn btn-default" target="_blank" href="{{vm.user.following_url}}">Follow</a>
+                    
+                    
+            </div>
+            <div class="col-sm-10 m-t-5">
+                <ul class="list-inline">
+                    <li>Repositories:{{vm.user.public_repos}}</li>
+                    <li>Followers:{{vm.user.followers}}</li>
+                    <li>Following:{{vm.user.following}}</li>
+                    <li>len:{{vm.userRepos.length}}</li>
+                    
+                </ul>
+                <div class="col-sm-6 repo-box m-t-2 p-2" ng-repeat="repo in vm.userRepos |limitTo:6">
+                    <h4 class="text-primary">{{repo.name}} </h4>
+                    <p>{{repo.description}}</p>
+                    <ul class="list-inline">
+                            <li>{{repo.language}}</li>
+                            <li>{{repo.stargazers_count}}</li>
+                            <li>{{repo.forks_count}}</li>
+
+                            
+                    </ul>
+
+
+                </div>
+                <!-- <pre>{{vm.userRepos|json}}</pre> -->
+            </div>
+    </div>
+</div>
+<!-- <pre>{{vm.user|json}}</pre> -->

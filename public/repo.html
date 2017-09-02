@@ -1,0 +1,35 @@
+<div class='repo-details col-sm-8'>
+        <div class="">
+                <ul class="list-inline">
+                    <li>{{vm.tech}}</li>
+                    <li>Repositories  : {{vm.data.total_count}}</li>
+                    <li>{{vm.tech}}</li>
+                    <li>{{vm.data.items.length}}</li>
+                </ul>
+                
+        </div>
+        <div>
+            <h3>{{vm.data.total_count}} repositories results</h3>
+        </div>
+        <div class='tech-details col-sm-12' ng-repeat="item in vm.data.items">
+          <div ui-sref="userDetail" class="col-sm-8" ng-click="vm.getUserInfo(item.owner.id)">
+            <h4 class="text-primary"> {{item.full_name}}</h4>
+              <p> {{item.description}}</p>
+          </div>
+          <div class="col-sm-2 m-t-5">
+              {{item.language}}
+          </div>
+          <div class="col-sm-2 m-t-5">
+                {{item.stargazers_count}}
+            </div>
+        
+        </div>
+</div>
+<!-- <div class='lang-container col-sm-4'>
+        <h2>Languages</h2>
+        <!-- <ul>
+          <li ng-repeat="l in vm.languages">{{l}}</li>
+        </ul> -->
+<!-- </div> --> 
+
+<!-- <pre>{{vm.data|json}}</pre> -->

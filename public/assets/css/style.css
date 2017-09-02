@@ -1,0 +1,61 @@
+body{
+  background-color:#e7ecef;
+}
+.tech-container{
+  border: 1px solid black;
+}
+.tech-list{
+  margin-top: 1%;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2%;
+  text-align: center;
+}
+.lang-container{
+  border: 1px solid black;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+
+}
+.tech-details{
+  margin-top: 1%;
+  border: 1px solid #5A5A90;
+  background-color: white;
+  border-radius: 5px;
+
+
+
+}
+.repo-details{
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.m-t-5{
+  margin-top:5%; 
+}
+.border-black{
+  background-color: gainsboro;
+  border:2px solid black;
+  border-radius: 5px;
+}
+.user-detail{
+  background-color: white;
+}
+.repo-box{
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 150px;
+
+}
+.m-t-2{
+  margin-top: 2%;
+  
+  
+}
+.p-2{
+  padding: 2%;
+}

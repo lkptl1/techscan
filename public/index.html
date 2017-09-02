@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project for SpiderG</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.5.6/angular-resource.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+	<script src="controller/mainController.js"></script>
+  
+  
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.js"></script>
+  
+  
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body ng-app="techScan" ng-controller="mainController as vm">
+
+    <div class=col-sm-12>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="home">Cast Technology</a>
+              </div>
+              <ul class="nav navbar-nav">
+                <li class="active"><a ui-sref="home">Home</a></li>
+                
+              </ul>
+              <form class="navbar-form navbar-left">
+                <div class="form-group">
+                  <input type="text" class="form-control" ng-model="vm.tech"  placeholder="Search for git repository">
+                </div>
+                <button type="submit" class="btn btn-default" ui-sref="repo" ng-click="vm.getTechDetails(vm.tech)">Submit</button>
+              </form>
+            </div>
+          </nav>
+        <div class=" col-sm-12">
+           <div ui-view>
+
+        </div>
+      
+        
+        
+       
+      
+    </div>
+
+</body>
+</html>
