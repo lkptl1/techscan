@@ -7,7 +7,6 @@ app.listen(9000,function(){
 	console.log("9000 is running");
 })
 
-app.get('*', function(req, res, next) {
-	res.sendfile(__dirname + '/public');
-    // call all routes and return the index.html file here
-});
+// app.get('*', function (req, res) {
+//    			res.sendFile(__dirname + '/public/index.html');
+// 		});

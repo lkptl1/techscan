@@ -63,7 +63,10 @@ app.factory('gitApi',['$resource',function($resource){
  })
  return resApi
 }]);
-app.config(function($stateProvider){
+app.config(['$stateProvider','$locationProvider','$urlRouterProvider',function($stateProvider,$locationProvider,$urlRouterProvider){
+  
+ $urlRouterProvider.otherwise('/home');
+
   $stateProvider.state('home',{
     url: '/home',
     templateUrl:'home.html'
@@ -78,7 +81,12 @@ app.config(function($stateProvider){
 
   })
 
-});
+ $locationProvider.html5Mode({
+ 	enabled: true,
+    requireBase: false
+ });
+
+}]);
 app.run(function($state){
   $state.go('home');
   
